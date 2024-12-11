@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netsuite Mock-Up</title>
+    <link rel="stylesheet" type="text.css" href="./scss/normalize.css" />
+    <link rel="stylesheet" href="./scss/main.css" />
+    <link rel="stylesheet" href="./scss/fonts.css" />
+    <link rel="stylesheet" href="./scss/fontawesome-all.css" />
+    <link rel="stylesheet" href="./scss/google.css" />
+  </head>
+  <body>
+    <div class="Header">
+      <div class="Logo">
+        <img class="Logo-img" src="img/precog-logo.png" />
+      </div>
+      <div class="ButtonGroup">
+        <a class="Button button" href="#"
+          ><i class="Icon fas fa-table"></i>Load History</a
+        >
+        <button class="Button">
+          <i class="Icon fas fa-user-circle"></i>My subscription</button
+        ><button class="Button">
+          <i class="Icon fas fa-sign-out-alt"></i>Log out
+        </button>
+      </div>
+    </div>
+    <div class="Page">
+      <div class="PipelineCreatePage">
+        <div class="Container">
+          <h1>Connect to NetSuite SuiteAnalytics Connect</h1>
+        </div>
+        <div class="Container">
+          <div class="SourceAdd">
+            <div class="Group">
+              <button class="Button" type="button">
+                <i class="Icon fas fa-arrow-left"></i>Back
+              </button>
+            </div>
+            <div class="ConnectorForm">
+              <div class="KindForm">
+                <label class="Field"
+                  ><div class="Field-label">Service Host</div>
+                  <input class="Input" type="text" placeholder="" /></label
+                ><label class="Field"
+                  ><div class="Field-label">Account ID</div>
+                  <input class="Input" type="text" placeholder="" /></label
+                ><label class="Field"
+                  ><div class="Field-label">Role ID</div>
+                  <input class="Input" type="text" placeholder="" /></label
+                ><label class="Field"
+                  ><div class="Field-label">Consumer Key</div>
+                  <input class="Input" type="text" placeholder="" /></label
+                ><label class="Field"
+                  ><div class="Field-label">Consumer Secret</div>
+                  <input class="Input" type="password" placeholder="" /></label
+                ><label class="Field"
+                  ><div class="Field-label">Token</div>
+                  <input class="Input" type="text" placeholder="" /></label
+                ><label class="Field"
+                  ><div class="Field-label">Token Secret</div>
+                  <input class="Input" type="password" placeholder="" /></label
+                ><label class="Field"
+                  ><div class="Field-label">Start Date</div>
+                  <div class="Field-description">
+                    <p>
+                      Start date for reporting endpoints in the format
+                      YYYY-MM-DD
+                    </p>
+                  </div>
+                  <input
+                    class="Input"
+                    type="text"
+                    placeholder="2023-01-01" /></label
+                ><label class="Field"
+                  ><div class="Field-label">Customer Fields</div>
+                  <div class="Field-description">
+                    <p>
+                      A comma-separated list of fields to fetch for the customer
+                      table, or * for all fields
+                    </p>
+                  </div>
+                  <input class="Input" type="text" placeholder="*" /></label
+                ><label class="Field"
+                  ><div class="Field-label">Transaction Fields</div>
+                  <div class="Field-description">
+                    <p>
+                      A comma-separated list of fields to fetch for the
+                      transaction table, or * for all fields
+                    </p>
+                  </div>
+                  <input class="Input" type="text" placeholder="*" /></label
+                ><label class="Field"
+                  ><div class="Field-label">Transactionline Fields</div>
+                  <div class="Field-description">
+                    <p>
+                      A comma-separated list of fields to fetch for the
+                      transactionline table, or * for all fields
+                    </p>
+                  </div>
+                  <input class="Input" type="text" placeholder="*"
+                /></label>
+              </div>
+              <div class="Group">
+                <div class="ButtonGroup">
+                  <button class="Button" type="button">
+                    <i class="Icon fas fa-plus"></i>Create source
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
