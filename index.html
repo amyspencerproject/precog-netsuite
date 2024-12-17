@@ -39,6 +39,95 @@
               </button>
             </div>
             <div class="ConnectorForm">
+              <p>
+                To gain access to NetSuite SuiteAnalytics API you will need 
+                to have a NetSuite administrator account and enable the 
+                SuiteAnalytics Connect Service feature. The 
+                <a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_3996274388.html#To-enable-the-Connect-Service-feature%3A">
+                  NetSuite Oracle documentation</a> 
+                  explains this feature in detail. 
+              </p>
+              <p>
+                There are several steps that need to be completed to acquire 
+                the necessary credentials to connect. As you move through 
+                these steps you can gather the credentials for the connection form below.
+              </p>
+              <ol class="InstructionList">
+                <li class="InstructionList-item">
+                  <p>
+                    Find your Service Host and Account Id. In your NetSuite dashboard, 
+                    under the Settings section, click Set Up SuiteAnalytics Connect. On 
+                    the Connect Driver Download page, copy and save the Service Host, 
+                    and the Account Id. You will need to enter these in the form below.
+                  </p>
+                </li>
+                <li class="InstructionList-item">
+                  <p>
+                    Enable token based authentication. In the top navigation click on 
+                    Setup > Company > Enable Features. From the Enable Features page 
+                    choose the SuiteCloud option. Scroll down and under the SuiteScript 
+                    section, check the Client SuiteScript option, read the User Agreement 
+                    and click ‘I Agree’. Also under the SuiteScript section, check the 
+                    Server SuiteScript option, read the User Agreement click ‘I Agree’. 
+                    Scroll down and under the Manage Authentication section, check the 
+                    Token-based Authentication option, read the User Agreement click ‘I 
+                    Agree’. Scroll down and click Save.
+                  </p>
+                </li>
+                <li class="InstructionList-item">
+                  <p>
+                    Create a new Integration Record. In the top navigation click on Setup > 
+                    Integration > Manage Integrations > New. This will take you to a new 
+                    Integration form. In the Name field, enter ‘Precog’. Select enable for 
+                    the State option. Under  the Authentication section check the Token-Based 
+                    Authentication option. Make sure all other options are not checked. Click 
+                    Save. You should see a confirmation message. Under the Client Credentials 
+                    section, copy and save the Consumer Key and Consumer Secret in a secure 
+                    place. You will need to enter these in the form below.
+                  </p>
+                </li>
+                <li class="InstructionList-item">
+                  <p>
+                    Assign permissions and create a new Role. In the top navigation click on 
+                    Setup > Users/Roles > Manage Roles > New.  This will take you to a new Role 
+                    form. In the Name field, enter ‘Precog’. Scroll down and under Permissions, 
+                    select the Setup tab. You will add two permissions to this role. In the 
+                    Permission field select the Log in using Access Tokens from the drop down 
+                    menu then click Add. Then select SuiteAnalytics Connect from the drop down 
+                    menu and click Add. Scroll down and click Save. 
+                  </p>
+                  <p>
+                    In the top navigation click on Setup > Users/Roles > Manage Users. Decide 
+                    which NetSuite user you want to use for your Precog connector.  Hover over 
+                    the username and click Edit in the user card. This will take you to the 
+                    Employee page. Scroll down to the Access section and check the “Give Access” 
+                    option.  You will assign two roles to this user. Under the Roles section, 
+                    select the “Data Warehouse Integrator” role from the drop down menu and click 
+                    Add. Then select the “Precog” role you just created from the drop down menu 
+                    and click Add. Scroll down and click Save.
+                  </p>
+                </li>
+                <li class="InstructionList-item">
+                  <p>
+                    Create an access token. In the top navigation click on Setup > Users/Roles > 
+                    Access Tokens > New.  This will take you to the Access Token page. For the 
+                    Application Name select the “Precog” Integration you created in Step 3 from 
+                    the drop down menu. For the User find the NetSuite user chose for your Precog 
+                    connector (Step 4) from the drop down menu. For the Role select the “Data Warehouse 
+                    Integrator” role from the drop down menu. Click Save (top of page). You should see 
+                    a confirmation message. Copy and save the Token Id and the Token Secret in a secure 
+                    place. You will need to enter these in the form below. 
+                  </p>
+                </li>
+                <li class="InstructionList-item">
+                  <p>
+                    Get Data Warehouse Integrator Role ID. In the top navigation click on Setup > 
+                    Users/Roles > Manage Roles. On the Manage Roles page, scroll down to find the 
+                    Data Warehouse Integrator role. Copy and save Internal Id for this role. You 
+                    will need to enter this in the form below.
+                  </p>
+                </li>
+              </ul>
               <div class="KindForm">
                 <label class="Field"
                   ><div class="Field-label">Service Host</div>
