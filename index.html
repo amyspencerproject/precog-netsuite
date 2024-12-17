@@ -41,9 +41,9 @@
             <div class="ConnectorForm">
               <p>
                 To gain access to NetSuite SuiteAnalytics API you will need 
-                to have a NetSuite administrator account and enable the 
+                to have a NetSuite administrator account and to enable the 
                 SuiteAnalytics Connect Service feature. The 
-                <a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_3996274388.html#To-enable-the-Connect-Service-feature%3A">
+                <a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_3996274388.html">
                   NetSuite Oracle documentation</a> 
                   explains this feature in detail. 
               </p>
@@ -55,10 +55,10 @@
               <ol class="InstructionList">
                 <li class="InstructionList-item">
                   <p>
-                    Find your Service Host and Account Id. In your NetSuite dashboard, 
+                    Find your <strong>Service Host</strong> and <strong>Account Id</strong>. In your NetSuite dashboard, 
                     under the Settings section, click Set Up SuiteAnalytics Connect. On 
-                    the Connect Driver Download page, copy and save the Service Host, 
-                    and the Account Id. You will need to enter these in the form below.
+                    the Connect Driver Download page, copy and save the <strong>Service Host</strong>, 
+                    and the <strong>Account Id</strong>. You will need to enter these in the form below.
                   </p>
                 </li>
                 <li class="InstructionList-item">
@@ -78,19 +78,19 @@
                   <p>
                     Create a new Integration Record. In the top navigation click on Setup > 
                     Integration > Manage Integrations > New. This will take you to a new 
-                    Integration form. In the Name field, enter ‘Precog’. Select enable for 
+                    Integration form. In the Name field, enter <code>Precog</code>. Select enable for 
                     the State option. Under  the Authentication section check the Token-Based 
                     Authentication option. Make sure all other options are not checked. Click 
                     Save. You should see a confirmation message. Under the Client Credentials 
-                    section, copy and save the Consumer Key and Consumer Secret in a secure 
-                    place. You will need to enter these in the form below.
+                    section, copy and save the <strong>Consumer Key</strong> and <strong>Consumer Secret</strong> 
+                    in a secure place. You will need to enter these in the form below.
                   </p>
                 </li>
                 <li class="InstructionList-item">
                   <p>
                     Assign permissions and create a new Role. In the top navigation click on 
                     Setup > Users/Roles > Manage Roles > New.  This will take you to a new Role 
-                    form. In the Name field, enter ‘Precog’. Scroll down and under Permissions, 
+                    form. In the Name field, enter <code>Precog</code>. Scroll down and under Permissions, 
                     select the Setup tab. You will add two permissions to this role. In the 
                     Permission field select the Log in using Access Tokens from the drop down 
                     menu then click Add. Then select SuiteAnalytics Connect from the drop down 
@@ -115,16 +115,17 @@
                     the drop down menu. For the User find the NetSuite user chose for your Precog 
                     connector (Step 4) from the drop down menu. For the Role select the “Data Warehouse 
                     Integrator” role from the drop down menu. Click Save (top of page). You should see 
-                    a confirmation message. Copy and save the Token Id and the Token Secret in a secure 
+                    a confirmation message. Copy and save the <strong>Token Id</strong> and the 
+                    <strong>Token Secret</strong> in a secure 
                     place. You will need to enter these in the form below. 
                   </p>
                 </li>
                 <li class="InstructionList-item">
                   <p>
-                    Get Data Warehouse Integrator Role ID. In the top navigation click on Setup > 
-                    Users/Roles > Manage Roles. On the Manage Roles page, scroll down to find the 
-                    Data Warehouse Integrator role. Copy and save Internal Id for this role. You 
-                    will need to enter this in the form below.
+                    Find the Data Warehouse Integrator <strong>Role ID</strong>. In the top navigation click on Setup > 
+                    Users/Roles > Manage Roles. Scroll down to find the Data Warehouse Integrator. Copy 
+                    and save the Internal Id which is the <strong>Role Id</strong>. You will need to enter  
+                    this in the form below.
                   </p>
                 </li>
               </ul>
@@ -133,10 +134,7 @@
                   ><div class="Field-label">Service Host</div>
                   <input class="Input" type="text" placeholder="" /></label
                 ><label class="Field"
-                  ><div class="Field-label">Account ID</div>
-                  <input class="Input" type="text" placeholder="" /></label
-                ><label class="Field"
-                  ><div class="Field-label">Role ID</div>
+                  ><div class="Field-label">Account Id</div>
                   <input class="Input" type="text" placeholder="" /></label
                 ><label class="Field"
                   ><div class="Field-label">Consumer Key</div>
@@ -145,11 +143,14 @@
                   ><div class="Field-label">Consumer Secret</div>
                   <input class="Input" type="password" placeholder="" /></label
                 ><label class="Field"
-                  ><div class="Field-label">Token</div>
+                  ><div class="Field-label">Token Id</div>
                   <input class="Input" type="text" placeholder="" /></label
                 ><label class="Field"
                   ><div class="Field-label">Token Secret</div>
                   <input class="Input" type="password" placeholder="" /></label
+                ><label class="Field"
+                  ><div class="Field-label">Role Id</div>
+                <input class="Input" type="text" placeholder="" /></label
                 ><label class="Field"
                   ><div class="Field-label">Start Date</div>
                   <div class="Field-description">
